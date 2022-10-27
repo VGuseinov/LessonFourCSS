@@ -1,0 +1,130 @@
+#absolute {
+    /*height: 100px;*/
+    /*width: 100px;*/
+    background: rgb(53, 53, 53);
+    position: absolute;
+    /* top, bottom, left, right */
+    top: 200px;
+    left: 200px;
+    bottom: 50px;
+    right: 180px;
+    z-index: 20;
+}
+
+#absolute2 {
+    background: rgb(148, 17, 71);
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 180px;
+    right: 180px;
+    z-index: 15;
+}
+
+body {
+    height: 2500px;
+}
+
+#block {
+    border: 20px dotted black;
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+#absolute3 {
+    height: 100px;
+    width: 100px;
+    background: url('https://heropy.blog/css/images/vendor_icons/html5.png') no-repeat;
+    background-size: 100px 90px;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    border-radius: 800px;
+    animation-name: download;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+/*#fixed {
+    height: 60px;
+    left: 40px;
+    right: 40px;
+    background: red;
+    top: 20px;
+    z-index: 99;
+    position: fixed;
+}*/
+
+#sticky {
+    height: 10px;
+    left: 40px;
+    right: 40px;
+    background: violet;
+    top: 10px;
+    z-index: 99;
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    flex-direction: row-reverse;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#sticky div {
+    height: 50px;
+    width: 50px;
+    /*Цвета в CSS*/
+    /*1. Название цвета на английском языке*/
+    background: yellow;
+    /*2. В 16-тиричном виде*/
+    background: #fff;
+    /*3. Используя псевдофункции*/
+    background: hsl(hue, saturation, lightness);
+    /*4. Заливка катринкой*/
+    background: url('');
+}
+
+@keyframes download {
+    0% {
+        width: 100px;
+        height: 100px;
+    }
+    10% {
+        width: 85px;
+        height: 85px;
+    }
+    40% {
+        right: 45px;
+    }
+    60% {
+        right: 60px;
+    }
+    80%{
+        border-radius: 30%;
+    }
+    100% {
+        right: 0px;
+        left: 10px;
+        border-radius: 0;
+    }    
+}
+
+@media all and (max-width: 600px) {
+    body {
+        background: blue;
+    }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 800px) {
+    body {
+        background: black;
+    }
+}
+
+@media print {
+    * {
+        font-size: 68px;
+    }
+}
